@@ -1,15 +1,17 @@
 {
   "name": "eli-router",
   "version": "0.0.1",
-  "description": "A router-core for nodejs server",
+  "description": "Core of a js router",
   "main": "./lib/Router.js",
+  "repository": "https://github.com/NameIsUseless/eli-router",
   "scripts": {
     "test": "mocha",
     "doc": "jsdox ./lib --output ./docs"
   },
-  "author": "",
+  "author": "hcyue",
   "license": "MIT",
   "devDependencies": {
-    "should": "^8.2.2"
+    "should": "^8.2.2",
+    "mocha": "*"
   }
 }
