@@ -1,6 +1,6 @@
 # eli-router
 
-Core of a node.js router, supporting nested route with multiple URL paramters and handlers.
+Core of a js router, supporting nested route with multiple URL paramters and handlers.
 
 Can be integrated into Nodejs or Browser framework such as koa and react.
 
