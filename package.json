@@ -1,6 +1,6 @@
 {
   "name": "eli-router",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Core of a js router",
   "main": "./lib/Router.js",
   "repository": "https://github.com/NameIsUseless/eli-router",

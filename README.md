@@ -4,6 +4,8 @@ Core of a js router, supporting nested route with multiple URL paramters and han
 
 Can be integrated into Nodejs or Browser framework such as koa and react.
 
+(For koa)[https://github.com/nameoverflow/eli-router]
+
 ## USEAGE
 
 ``` js
