@@ -1,5 +1,9 @@
 # eli-router
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Build Status](https://travis-ci.org/nameoverflow/eli-router.svg?branch=master)](https://travis-ci.org/nameoverflow/eli-router)
+
+
 Core of a js router, supporting nested route with multiple URL paramters and handlers.
 
 Can be integrated into Nodejs or Browser framework such as koa and react.
