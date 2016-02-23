@@ -1,6 +1,6 @@
 {
   "name": "eli-router",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Core of a js router",
   "main": "./lib/Router.js",
   "repository": "https://github.com/NameIsUseless/eli-router",
@@ -11,7 +11,14 @@
   "author": "hcyue",
   "license": "MIT",
   "devDependencies": {
-    "should": "^8.2.2",
-    "mocha": "*"
+    "commitizen": "^2.5.0",
+    "cz-conventional-changelog": "^1.1.5",
+    "mocha": "*",
+    "should": "^8.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

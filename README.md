@@ -6,6 +6,8 @@ Can be integrated into Nodejs or Browser framework such as koa and react.
 
 (For koa)[https://github.com/nameoverflow/eli-router]
 
+Used by (eliter)[https://github.com/nameoverflow/eliter]
+
 ## USEAGE
 
 ``` js
@@ -25,6 +27,16 @@ Router.handle(matched) // => "Id: 1234567"
 R.route('/user/::/').route('/messageto/::', (user, target) => `User ${user} send message to id ${target}`)
 
 Router.handle(R.dispatch('/user/123/messageto/456').pop()) // => "User 123 send message to id 456"
+
+
+R.route('/admin/::', id => `Id: ${id}`)
+
+// work with asterisk 
+
+R.route('/something/*', () => 'Something')
+
+let matched = R.dispatch('/something/others/blahblah').pop()
+Router.handle(matched) // => "Something"
 
 
 function checkSession() {

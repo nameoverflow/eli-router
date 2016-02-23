@@ -80,6 +80,14 @@ describe('Node', () => {
             doSomethingAdmin(r1).should.equal("admin id: 123 is adding user")
             doSomethingAdmin(r2).should.equal("admin id: 456 is removing user")
         })
+
+        it('Should work with asterisk route', () => {
+            let r = new Router()
+            r.route('/admin/*', () => "test")
+
+            let result = r.dispatch('/admin/shit/world/holy')
+            Router.handle(result.pop()).should.equal("test")
+        })
     })
 
 })
