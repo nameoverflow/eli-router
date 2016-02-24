@@ -20,7 +20,7 @@ let Router = require('eli-router')
 let R = new Router()
 
 // :: stands for a URL paramter.
-R.route('/admin/::', id => `Id: ${id}`)
+R.route('/admin/::').end(id => `Id: ${id}`)
 
 // URL.pathname = '/admin/1234567'
 
@@ -28,16 +28,13 @@ let matched = R.dispatch(URL.pathname).pop()
 Router.handle(matched) // => "Id: 1234567"
 
 
-R.route('/user/::/').route('/messageto/::', (user, target) => `User ${user} send message to id ${target}`)
+R.route('/user/::/').route('/messageto/::').end((user, target) => `User ${user} send message to id ${target}`)
 
 Router.handle(R.dispatch('/user/123/messageto/456').pop()) // => "User 123 send message to id 456"
 
-
-R.route('/admin/::', id => `Id: ${id}`)
-
 // work with asterisk 
 
-R.route('/something/*', () => 'Something')
+R.route('/something/*').end(() => 'Something')
 
 let matched = R.dispatch('/something/others/blahblah').pop()
 Router.handle(matched) // => "Something"
@@ -52,7 +49,7 @@ function showID(id) {
     // Show id to client....
 }
 
-R.route('/user', checkSession).route('/::', showID)
+R.route('/user', checkSession).route('/::').end(showID)
 
 R.dispatch('/user/123') // => [[showID, [123]], [checkSession, []]]
 
